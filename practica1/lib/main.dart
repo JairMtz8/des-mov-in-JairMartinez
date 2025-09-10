@@ -68,12 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _decrementCounter() {
-    setState(() {
-      if (_counter > 0){
-        _counter--;
-      }
-    });
-  }
+  setState(() {
+    _counter = _counter > 0 ? _counter - 1 : 0;
+  });
+}
 
   @override
   Widget build(BuildContext context) {
